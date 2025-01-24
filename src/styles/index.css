@@ -1,33 +1,49 @@
-.paper{
+.paper {
     background: #fff;
-  box-shadow:
-    /* The top layer shadow */
+    box-shadow:
     0 1px 1px rgba(0,0,0,0.15),
-    /* The second layer */
     0 10px 0 -5px #eee,
-    /* The second layer shadow */
     0 10px 1px -4px rgba(0,0,0,0.15),
-     /* The third layer */
     0 20px 0 -10px #eee,
-    /* The third layer shadow */
     0 20px 1px -9px rgba(0,0,0,0.15);
-    /* Padding for demo purposes */
-    padding: 8px;
+    padding: 10px; 
+    width: 800px;
+    margin: 0 auto;
+    display: block;
 }
 
 .h1{
-    color: rgba(192, 134, 134, 0.274);
+    color: rgba(237, 16, 16, 0.274);
+    text-align: center;
 }
 
 input {
-    width: 696px;
+    width: 800px;
     height: 40px;
     border-radius: 5px;
-    border-color: rgb(245, 241, 241);
+    border-color: rgb(200, 198, 198);
+    margin: 0 auto;
+    display: block;
+
 }
 
 .list-group-item {
     border-radius: 5px;
-    border-color: rgb(245, 241, 241);
+    border-color: rgb(200, 198, 198);
+    width: 800px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.relative-container {
+    position: relative;
+}
+
+.absolute-close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    color: red;
 }
 

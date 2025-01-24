@@ -19,8 +19,8 @@ const Todolist = () => {
 
     return (
         <>
-        <p className="h1 text-center">todos</p>
-            <div className="container">
+        <p className="h1 text-center">Tareas pendientes:</p>
+            <div className="containerr">
                 <input 
                                         type="text" 
                                         value={inputValue}
@@ -28,9 +28,9 @@ const Todolist = () => {
                                         onKeyDown={(e) => {
                                             if (e.key == "Enter") {agregarTarea()}
                                         }}
-                                        placeholder={"que vas a hacer?"}
+                                        placeholder={"¿Que haras a hoy?"}
                                     />
-                    <ul className="list-group">
+                    <div className="list-group">
                         {tareas.length > 0 ? tareas.map((item, index) => (
                             <li 
                                 key={index} 
@@ -39,17 +39,11 @@ const Todolist = () => {
                                 onMouseLeave={() => setHoveredIndex(-1)}
                             >
                 
-                                    <div style={{ position: 'relative' }}>
+                                    <div className="relative-container">
                                         {item}
                                         {hoveredIndex === index && 
                                             <span 
-                                                style={{ 
-                                                    position: 'absolute', 
-                                                    top: '5px', 
-                                                    right: '5px', 
-                                                    cursor: 'pointer', 
-                                                    color: 'red'
-                                                }}
+                                                className="absolute-close"
                                                 onClick={() => eliminarTarea(index)}
                                             >
                                                 X
@@ -62,8 +56,8 @@ const Todolist = () => {
                         <li 
                         className="list-group-item">No hay tareas</li>
                         }
-                    </ul>
-                    <p className="container paper">Total de tareas: {tareas.length}</p>
+                    </div>
+                    <p className="cotainer paper">Total de tareas: {tareas.length}</p>
             </div>
         </>
     );
