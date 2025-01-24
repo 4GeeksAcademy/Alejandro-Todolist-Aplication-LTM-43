@@ -20,7 +20,7 @@ const Todolist = () => {
     return (
         <>
         <p className="h1 text-center">Tareas pendientes:</p>
-            <div className="containerr">
+            <div className="container">
                 <input 
                                         type="text" 
                                         value={inputValue}
